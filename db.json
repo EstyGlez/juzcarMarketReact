@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": "27fe",
+            "userName":"Esty",
+            "surName": "Glez",
+            "lastName": "Perez",
+            "email": "estibaliz@gmail.com",
+            "phoneNumber": "633157005",
+            "adress": "Avda. Principal 7, 5º, B. C.P: 29630, Málaga"
+        }
+    ],
+
+    "products": [
+        {
+            "id": "256c",
+            "description":"Taza Pitufos",
+            "image":"",
+            "price":"15€"
+        }
+    ]
+}
