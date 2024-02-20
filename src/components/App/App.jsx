@@ -1,11 +1,12 @@
-import Navbar from "../Navbar/Navbar"
+import NavBar from "../Navbar/Navbar"
+
 
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
     </>
   )
 }
