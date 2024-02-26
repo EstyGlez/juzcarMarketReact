@@ -9,9 +9,12 @@ const HomeView = () => {
   const shoppingCart = "src/assets/carritocard.svg";
 
   return (
-    <div>
-      <Carousel1/>
-      <img src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
+    <div className='home-view'>
+        <img className='home-view-photo' src="https://i.postimg.cc/Ss5SPGVD/pisajej-zcar-1-1.png" alt="" />
+
+        <h1 className='home-view-title'>Colaboradores</h1>
+      <Carousel1/> 
+
       <div className="product-card">
         <img src={imageUrl} alt="Producto" className="product-image" />
         <div className="product-title">{title}</div>
@@ -20,6 +23,10 @@ const HomeView = () => {
           <img src={shoppingCart} alt="Carrito" className="product-icon" /> 
         </div>
       </div>
+      
+      <img className='photo-pitufos'src="https://i.postimg.cc/fW2TtMNY/pngwing-com-1.png" alt="" />
+       <img className='photo-mayor' src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
+       
     </div>
   );
 }
