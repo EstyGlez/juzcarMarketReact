@@ -5,6 +5,7 @@ const HomeView = () => {
     <div>
 
       <Carousel1/>
+       <img src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
     </div>
   );
 }
