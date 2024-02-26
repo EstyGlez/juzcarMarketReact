@@ -1,6 +1,7 @@
 import React from 'react';
-import NavBar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import NavBar from "../Navbar/Navbar"
+import Loginmodal from "../LoginModal/Loginmodal.jsx"
 
 
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <NavBar />
       <Footer />
+      <Loginmodal />
     </>
   )
 }

@@ -1,22 +1,45 @@
 {
-    "users": [
-        {
-            "id": "27fe",
-            "userName":"Esty",
-            "surName": "Glez",
-            "lastName": "Perez",
-            "email": "estibaliz@gmail.com",
-            "phoneNumber": "633157005",
-            "adress": "Avda. Principal 7, 5º, B. C.P: 29630, Málaga"
-        }
-    ],
-
-    "products": [
-        {
-            "id": "256c",
-            "description":"Taza Pitufos",
-            "image":"",
-            "price":"15€"
-        }
-    ]
+  "users": [
+    {
+      "id": "27fe",
+      "name": "Esty",
+      "lastName": "Glez",
+      "secondLastName": "Perez",
+      "phone": "estibaliz@gmail.com",
+      "email": "633157005",
+      "username": "Avda. Principal 7, 5º, B. C.P: 29630, Málaga",
+      "password": "Avda. Principal 7, 5º, B. C.P: 29630, Málaga"
+    },
+    {
+      "id": "a926",
+      "name": "Estibaliz",
+      "lastName": "Gonzalez ",
+      "secondLastName": "Pérez",
+      "email": "estibaliz87gonzalez@gmail.com",
+      "phone": "633157005",
+      "username": "esty",
+      "password": "esty"
+    },
+    {
+      "id": "a27a",
+      "name": "Lidia",
+      "lastName": "se enfada mucho",
+      "secondLastName": "si le tocas figma",
+      "email": "lidia@gmail.com",
+      "phone": "652147963",
+      "username": "lidia",
+      "password": "lidia"
+    }
+  ],
+  "Products": [
+    {
+      "id": "2",
+      "title": "Taza Pitufos cerámica",
+      "price": 14.95,
+      "description": "Excelentes chaquetas de abrigo para primavera/otoño/invierno, adecuadas para muchas ocasiones, como trabajar, hacer caminatas, acampar, escalar montañas/rocas, andar en bicicleta, viajar u otras actividades al aire libre. Buena opción de regalo para usted o su familiar. Un amor de corazón cálido al Padre, esposo o hijo en este día de acción de gracias o Navidad.",
+      "category": "",
+      "image": "",
+      "stock": 90
+    }
+  ]
 }
