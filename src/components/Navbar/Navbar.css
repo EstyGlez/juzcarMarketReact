@@ -1,0 +1,28 @@
+
+.navbarStyle {
+  background-color: #44BAD3 !important;
+  color: white;
+}
+
+.juzgar-logo{
+  height: 90px;
+  width: auto;
+}
+
+.icon-user, .icon-shop{
+  height: 36px;
+  width: auto;
+}
+
+.btn.add-product{
+  border-radius: 30px;
+  background-color: white;
+  color: #44BAD3;
+  border: none;
+}
+
+
+
+.icon-user, .icon-shop {
+  padding-inline: px;
+}
