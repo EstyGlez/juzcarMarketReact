@@ -1,0 +1,22 @@
+.product-card {
+    width: 200px;
+    background-color: #EDF3F8;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+  }
+  
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+  }
+  
