@@ -29,6 +29,16 @@
       "phone": "652147963",
       "username": "lidia",
       "password": "lidia"
+    },
+    {
+      "id": "635e",
+      "name": "Stefania",
+      "lastName": "Luna",
+      "secondLastName": "Palacio",
+      "email": "nia.luna12@gmail.com",
+      "phone": "6112548935",
+      "username": "Stefania",
+      "password": "123456"
     }
   ],
   "Products": [

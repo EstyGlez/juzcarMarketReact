@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <Footer />
       <Loginmodal />
+      <Footer />
     </>
   )
 }
