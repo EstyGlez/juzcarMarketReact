@@ -14,7 +14,7 @@ const HomeView = () => {
 
         <h1 className='home-view-title'>Colaboradores</h1>
       <Carousel1/> 
-
+      <h1 className='home-view-title'>Nuestros productos</h1>
       <div className="product-card">
         <img src={imageUrl} alt="Producto" className="product-image" />
         <div className="product-title">{title}</div>
