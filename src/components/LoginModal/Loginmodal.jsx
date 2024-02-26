@@ -1,101 +1,138 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css'
-import { Link, useNavigate } from 'react-router-dom';
-
-
-
+import './Loginmodal.css';
+import userService from '../../../userService.js';
 
 const LoginModal = () => {
-    const [opened, setOpened] = useState(false);
-    const [showPassword, setShowPassword] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [newUser, setNewUser] = useState(false);
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [secondLastName, setSecondLastName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
-    const [users, setUsers] = useState('');
-    const [password, setPassword] = useState('');
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const users = await userService.getAllUsers();
+      const user = users.find(user => user.username === username && user.password === password);
+      if (user) {
+        alert('Inicio de sesión exitoso');
+        setShowModal(false);
+      } else {
+        alert('Nombre de usuario o contraseña incorrectos');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Ocurrió un error al iniciar sesión');
+    }
+  };
 
-
-    const navigate = useNavigate();
-
-
-    const openedModal = () => {
-        setOpened(true);
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const newUserObj = {
+      name,
+      lastName,
+      secondLastName,
+      email, 
+      phone, 
+      username,
+      password
     };
+    try {
+      await userService.addUser(newUserObj);
+      alert('Usuario registrado exitosamente');
+      setShowModal(false);
+    } catch (error) {
+      console.error(error);
+      alert('Ocurrió un error al registrar el usuario');
+    }
+  };
 
-    const closeModal = () => {
-        setOpened(false);
-    };
-
-    const toggleShowPassword = () => {
-        setShowPassword(!showPassword);
-    };
-
-
-    const handleUsersChange = (e) => {
-        setUsers(e.target.value);
-
-    };
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-
-    };
-
-    const startSession = () => {
-        if (usuario.trim() !== '' && password.trim() !== '') {
-
-            navigate('/Menu');
-           
-            closeModal();
-        } else {
-
-            alert('Por favor, completa todos los campos antes de iniciar sesión.');
-        }
-    };
-
-
-    return (
-        <>
-            <div className='principal'>
-                <div className='col-md-1 mx-auto text-center'>
-                    <Button style={{ backgroundColor: '#22577E', color: 'white', margin: 30, padding: 15, marginBottom: 30}} size="lg" onClick={openedModal}>ACCESS</Button>{' '}
-                </div>
-            </div>
-
-            <Modal isOpen={abierto} toggle={closeModal}>
-
-                <ModalHeader>
-                    Iniciar Sesión
-                </ModalHeader>
-
-                <ModalBody>
-                    <FormGroup>
-                        <Label for="usuario"> Usuario </Label>
-                        <Input type="text" id="usuario" value={usuario} onChange={handleUsersChange} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="password"> Contraseña </Label>
-                        <Input type={showPassword ? 'text' : 'password'} id="password" value={password} onChange={handlePasswordChange} />
-                    </FormGroup>
-
-                    <Button color="info" onClick={toggleShowPassword}>
-                        Check
-                    </Button>
-
-                </ModalBody>
-
-
-                <ModalFooter>
-
-                    <Button color="primary" onClick={startSession}>Iniciar Sesión</Button>
-                    <Button color="secondary" onClick={closeModal}>Cerrar</Button>
-
-                </ModalFooter>
-
-
-            </Modal>
-
-        </>
-    )
+  return (
+    <div className="App">
+      <button onClick={() => setShowModal(true)}>Abrir Modal</button>
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={() => setShowModal(false)}>&times;</span>
+            <h2>{newUser ? 'Registrarse' : 'Iniciar Sesión'}</h2>
+            <form onSubmit={newUser ? handleRegister : handleLogin}>
+              {newUser && (
+                <>
+                  <label htmlFor="name">Nombre:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                  <label htmlFor="lastName">Apellido:</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
+                  />
+                  <label htmlFor="secondLastName">Segundo Apellido:</label>
+                  <input
+                    type="text"
+                    id="secondLastName"
+                    value={secondLastName}
+                    onChange={(e) => setSecondLastName(e.target.value)}
+                    required
+                  />
+                  <label htmlFor="phone">Teléfono:</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                  <label htmlFor="email">Correo Electrónico:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </>
+              )}
+              <label htmlFor="username">Usuario:</label>
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+              <label htmlFor="password">Contraseña:</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <button type="submit">{newUser ? 'Registrarse' : 'Iniciar Sesión'}</button>
+            </form>
+            {!newUser && (
+              <p>
+                ¿Todavía no estás registrado?{' '}
+                <button onClick={() => setNewUser(true)}>Regístrate aquí</button>
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default LoginModal;
