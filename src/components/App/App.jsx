@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <Footer />
       <Loginmodal />
-      <HomeView/>
+      <HomeView />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App
