@@ -12,8 +12,8 @@ function App() {
     <>
       <NavBar />
       <Loginmodal />
-      <Footer />
       <HomeView/>
+      <Footer />
     </>
   )
 }
