@@ -6,11 +6,11 @@ const Product = () => {
   const [productos, setProductos] = useState([]);
   const [newProduct, setNewProduct] = useState({
     title: '',
-    price: 0,
+    price: '',
     description: '',
     category: '',
     image: '',
-    stock: 0
+    stock: '',
   });
 
   useEffect(() => {
@@ -33,11 +33,11 @@ const Product = () => {
       alert('Producto agregado exitosamente');
       setNewProduct({
         title: '',
-        price: 0,
+        price: '',
         description: '',
         category: '',
         image: '',
-        stock: 0
+        stock: '',
       });
       fetchData(); 
     } catch (error) {
@@ -122,7 +122,6 @@ const Product = () => {
           <p>Categoría: {producto.category}</p>
           <p>Imagen: {producto.image}</p>
           <p>Stock: {producto.stock}</p>
-          {/* Agregar botones de editar y eliminar */}
           <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
         </div>
       ))}
