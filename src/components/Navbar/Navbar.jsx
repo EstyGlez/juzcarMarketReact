@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Loginmodal from "../LoginModal/Loginmodal";
 import { Container, Navbar } from "react-bootstrap";
 
 function NavBar() {
@@ -18,6 +19,7 @@ function NavBar() {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end navbar-style">
+            <Loginmodal />
             <Button className="add-product mx-4">Subir producto</Button>
             <div className="navbar-icons">
               <img
