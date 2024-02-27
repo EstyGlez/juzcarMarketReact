@@ -43,13 +43,49 @@
   ],
   "Products": [
     {
-      "id": "2",
-      "title": "Taza Pitufos cerámica",
-      "price": 14.95,
-      "description": "Excelentes chaquetas de abrigo para primavera/otoño/invierno, adecuadas para muchas ocasiones, como trabajar, hacer caminatas, acampar, escalar montañas/rocas, andar en bicicleta, viajar u otras actividades al aire libre. Buena opción de regalo para usted o su familiar. Un amor de corazón cálido al Padre, esposo o hijo en este día de acción de gracias o Navidad.",
-      "category": "",
-      "image": "",
-      "stock": 90
+      "id": "a8d8",
+      "title": "1",
+      "price": "a",
+      "description": "a",
+      "category": "aa",
+      "image": "https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png",
+      "stock": "1"
+    },
+    {
+      "id": "b860",
+      "title": "v",
+      "price": "v",
+      "description": "v",
+      "category": "v",
+      "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
+      "stock": "v"
+    },
+    {
+      "id": "a0a3",
+      "title": "c",
+      "price": "c",
+      "description": "c",
+      "category": "c",
+      "image": "https://i.postimg.cc/Wzw3C329/puzzlepitufos.jpg",
+      "stock": "c"
+    },
+    {
+      "id": "d5bb",
+      "title": "b",
+      "price": "b",
+      "description": "b",
+      "category": "b",
+      "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
+      "stock": "b"
+    },
+    {
+      "id": "0195",
+      "title": "1",
+      "price": "1",
+      "description": "1",
+      "category": "1",
+      "image": "https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg",
+      "stock": "1"
     }
   ]
 }

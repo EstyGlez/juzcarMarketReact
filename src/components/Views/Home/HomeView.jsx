@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import Carousel1 from "../../Carousel/Carousel";
 import './Homeview.css';
+import CardsForm from '../../cardsform/CardsForm.jsx';
 
 // Componente de Producto
 function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked }) {
