@@ -39,7 +39,7 @@ const Product = () => {
         image: '',
         stock: 0
       });
-      fetchData(); // Actualizar la lista de productos después de agregar uno nuevo
+      fetchData(); 
     } catch (error) {
       console.error('Error al agregar producto:', error);
     }
@@ -49,7 +49,7 @@ const Product = () => {
     try {
       await userService.deleteProduct(productId);
       alert('Producto eliminado exitosamente');
-      fetchData(); // Actualizar la lista de productos después de eliminar uno
+      fetchData(); 
     } catch (error) {
       console.error('Error al eliminar producto:', error);
     }
@@ -57,7 +57,7 @@ const Product = () => {
 
   return (
     <div>
-      {/* Formulario para subir productos */}
+      
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Título:</label>
         <input
@@ -67,17 +67,61 @@ const Product = () => {
           onChange={(e) => setNewProduct({ ...newProduct, title: e.target.value })}
           required
         />
-        {/* Otros campos del producto */}
-        <button type="submit">Agregar Producto</button>
+            <label htmlFor="title">Precio:</label>
+        <input
+          type="text"
+          id="title"
+          value={newProduct.price}
+          onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
+          required
+        />
+            <label htmlFor="title">Descripción:</label>
+        <input
+          type="text"
+          id="title"
+          value={newProduct.description}
+          onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })}
+          required
+        />
+            <label htmlFor="title">Categoría:</label>
+        <input
+          type="text"
+          id="title"
+          value={newProduct.category}
+          onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
+          required
+        />
+            <label htmlFor="title">Imagen:</label>
+        <input
+          type="text"
+          id="title"
+          value={newProduct.image}
+          onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
+          required
+        />
+            <label htmlFor="title">Stock:</label>
+        <input
+          type="text"
+          id="title"
+          value={newProduct.stock}
+          onChange={(e) => setNewProduct({ ...newProduct, stock: e.target.value })}
+          required
+        />
+    
+
+
+        <button type="submit">Agregar Proucto</button>
       </form>
 
-      {/* Renderizar las tarjetas de productos */}
+
       {productos.map((producto) => (
         <div key={producto.id} className="product-card">
           <h3>{producto.title}</h3>
           <p>Precio: {producto.price}</p>
           <p>Descripción: {producto.description}</p>
           <p>Categoría: {producto.category}</p>
+          <p>Imagen: {producto.image}</p>
+          <p>Stock: {producto.stock}</p>
           {/* Agregar botones de editar y eliminar */}
           <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
         </div>

@@ -33,13 +33,13 @@
   ],
   "Products": [
     {
-      "id": "2",
-      "title": "Taza Pitufos cerámica",
-      "price": 14.95,
-      "description": "Excelentes chaquetas de abrigo para primavera/otoño/invierno, adecuadas para muchas ocasiones, como trabajar, hacer caminatas, acampar, escalar montañas/rocas, andar en bicicleta, viajar u otras actividades al aire libre. Buena opción de regalo para usted o su familiar. Un amor de corazón cálido al Padre, esposo o hijo en este día de acción de gracias o Navidad.",
-      "category": "",
-      "image": "",
-      "stock": 90
+      "id": "d9b4",
+      "title": "taza",
+      "price": "14.95",
+      "description": "taza pitufística",
+      "category": "menaje",
+      "image": "image",
+      "stock": "2"
     }
   ]
 }
