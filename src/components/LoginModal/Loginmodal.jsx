@@ -53,7 +53,7 @@ const LoginModal = () => {
 
   return (
     <div className="App">
-      <button onClick={() => setShowModal(true)}>Abrir Modal</button>
+      <button onClick={() => setShowModal(true)}>Inicia Sesión o Regístrate</button>
       {showModal && (
         <div className="modal">
           <div className="modal-content">
