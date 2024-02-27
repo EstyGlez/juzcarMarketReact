@@ -9,7 +9,7 @@ const Product = () => {
     price: '',
     description: '',
     category: '',
-    image: '',
+    image: null,
     stock: '',
   });
 
@@ -36,7 +36,7 @@ const Product = () => {
         price: '',
         description: '',
         category: '',
-        image: '',
+        image: null,
         stock: '',
       });
       fetchData(); 
@@ -91,14 +91,24 @@ const Product = () => {
           onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
           required
         />
-            <label htmlFor="title">Imagen:</label>
+
+<label htmlFor="title">Copie la URL de su imagen:</label>
         <input
           type="text"
           id="title"
           value={newProduct.image}
           onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
           required
+          
         />
+        {newProduct.image && (
+          <img
+            src={newProduct.image}
+            alt="Previsualización de la imagen"
+            style={{ maxWidth: '17%', height: '200px' }}
+          />
+        )}
+
             <label htmlFor="title">Stock:</label>
         <input
           type="text"
@@ -120,9 +130,11 @@ const Product = () => {
           <p>Precio: {producto.price}</p>
           <p>Descripción: {producto.description}</p>
           <p>Categoría: {producto.category}</p>
-          <p>Imagen: {producto.image}</p>
+          <img src={producto.image} alt={producto.title} width={100}
+            height={100}></img>
           <p>Stock: {producto.stock}</p>
           <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
+          <button onClick={() => handleSubmit(producto.id)}>Editar</button>
         </div>
       ))}
     </div>
