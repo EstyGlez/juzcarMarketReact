@@ -33,13 +33,49 @@
   ],
   "Products": [
     {
-      "id": "d9b4",
-      "title": "taza",
-      "price": "14.95",
-      "description": "taza pitufística",
-      "category": "menaje",
-      "image": "image",
-      "stock": "2"
+      "id": "a8d8",
+      "title": "1",
+      "price": "a",
+      "description": "a",
+      "category": "aa",
+      "image": "https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png",
+      "stock": "1"
+    },
+    {
+      "id": "b860",
+      "title": "v",
+      "price": "v",
+      "description": "v",
+      "category": "v",
+      "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
+      "stock": "v"
+    },
+    {
+      "id": "a0a3",
+      "title": "c",
+      "price": "c",
+      "description": "c",
+      "category": "c",
+      "image": "https://i.postimg.cc/Wzw3C329/puzzlepitufos.jpg",
+      "stock": "c"
+    },
+    {
+      "id": "d5bb",
+      "title": "b",
+      "price": "b",
+      "description": "b",
+      "category": "b",
+      "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
+      "stock": "b"
+    },
+    {
+      "id": "0195",
+      "title": "1",
+      "price": "1",
+      "description": "1",
+      "category": "1",
+      "image": "https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg",
+      "stock": "1"
     }
   ]
 }

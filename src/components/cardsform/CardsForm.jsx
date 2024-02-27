@@ -6,11 +6,11 @@ const Product = () => {
   const [productos, setProductos] = useState([]);
   const [newProduct, setNewProduct] = useState({
     title: '',
-    price: 0,
+    price: '',
     description: '',
     category: '',
-    image: '',
-    stock: 0
+    image: null,
+    stock: '',
   });
 
   useEffect(() => {
@@ -33,11 +33,11 @@ const Product = () => {
       alert('Producto agregado exitosamente');
       setNewProduct({
         title: '',
-        price: 0,
+        price: '',
         description: '',
         category: '',
-        image: '',
-        stock: 0
+        image: null,
+        stock: '',
       });
       fetchData(); 
     } catch (error) {
@@ -91,14 +91,24 @@ const Product = () => {
           onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
           required
         />
-            <label htmlFor="title">Imagen:</label>
+
+<label htmlFor="title">Copie la URL de su imagen:</label>
         <input
           type="text"
           id="title"
           value={newProduct.image}
           onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
           required
+          
         />
+        {newProduct.image && (
+          <img
+            src={newProduct.image}
+            alt="Previsualización de la imagen"
+            style={{ maxWidth: '17%', height: '200px' }}
+          />
+        )}
+
             <label htmlFor="title">Stock:</label>
         <input
           type="text"
@@ -120,10 +130,11 @@ const Product = () => {
           <p>Precio: {producto.price}</p>
           <p>Descripción: {producto.description}</p>
           <p>Categoría: {producto.category}</p>
-          <p>Imagen: {producto.image}</p>
+          <img src={producto.image} alt={producto.title} width={100}
+            height={100}></img>
           <p>Stock: {producto.stock}</p>
-          {/* Agregar botones de editar y eliminar */}
           <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
+          <button onClick={() => handleSubmit(producto.id)}>Editar</button>
         </div>
       ))}
     </div>
