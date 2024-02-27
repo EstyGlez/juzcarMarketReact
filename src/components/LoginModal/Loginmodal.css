@@ -4,23 +4,26 @@
   }
   
   .modal {
-    display: block; /* Mostrar modal cuando showModal es verdadero */
+    display: block; 
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0,0,0,0.5); 
     overflow: auto;
   }
   
   .modal-content {
-    background-color: #fefefe;
+    background-color: #cbebf3;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border: 2px solid #087aa7;
+    width: 35%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
   }
   
   .close {
@@ -36,3 +39,31 @@
     text-decoration: none;
     cursor: pointer;
   }
+  
+  label,
+  input {
+    display: flex; 
+    flex-direction:column;
+    justify-content:baseline;
+    margin-bottom: 10px;
+    align-items:baseline;
+    height: 32px;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+
+  }
+
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 5px;
+}
