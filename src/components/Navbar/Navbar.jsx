@@ -19,14 +19,9 @@ function NavBar() {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end navbar-style">
-            <Loginmodal />
             <Button className="add-product mx-4">Subir producto</Button>
             <div className="navbar-icons">
-              <img
-                src="src\assets\icon-user.svg"
-                className="icon-user mx-3"
-                alt=""
-              />
+              <Loginmodal />
               <img
                 src="src\assets\icon-shop.svg"
                 className="icon-shop"
