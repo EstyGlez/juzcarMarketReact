@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Wishlist.css';
+import { products, newproduct } from './Wishlist.const';
 
-// Componente de Producto
 function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked }) {
   const handleLikeClick = () => {
     if (isLiked) {
@@ -13,9 +13,6 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
     }
   };
 
-  const handleCartClick = () => {
-    openLoginModal();
-  };
 
   return (
     <div className="product-card">
@@ -49,82 +46,44 @@ function Wishlist() {
       <h2>Productos más vendidos este mes</h2>
       <div className="best-sellers">
         {/* Renderizar instancias separadas de ProductCard para cada producto */}
-        <ProductCard
-          imageUrl="https://i.postimg.cc/TPmwVpvy/bodybeb.jpg"
-          name="Body bebé pitufo"
-          price="20,00€"
+        {products.map(product => {
+          return(
+            <ProductCard
+          imageUrl={product.imageURL}
+          name={product.name}
+          price={product.price}
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Body bebé pitufo")}
+          isLiked={favorites.some(item => item.name === product.name)}
         />
-        <ProductCard
-          imageUrl="https://i.postimg.cc/JnJt3xSC/peluchepitufo.jpg"
-          name="Peluche pitufo"
-          price="30,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Peluche pitufo")}
-        />
-        <ProductCard
-          imageUrl="https://i.postimg.cc/fTLRHHhQ/figurapitufina.jpg"
-          name="Figura pitufina"
-          price="15,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Figura pitufina")}
-        />
-        <ProductCard
-          imageUrl=" https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg"
-          name="Camiseta negra de hombre"
-          price="10,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Remera pitufo")}
-        />
+          )
+        })}
+        
       </div>
 
       <h2>Productos recientemente añadidos</h2>
-       <div className='new-add'>
-        <ProductCard
-          imageUrl="https://i.postimg.cc/G2xmfV2d/camisetamujer.jpg"
-          name="Camiseta negra de mujer"
-          price="12,00€"
+       <div className='new-product'>
+        {newproduct.map(newproduct => {
+          return(
+            <ProductCard
+          imageUrl={newproduct.imageURL}
+          name={newproduct.name}
+          price={newproduct.price}
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Remera pitufa")}
+          isLiked={favorites.some(item => item.name === newproduct.name)}
         />
-        <ProductCard
-          imageUrl="https://i.postimg.cc/C5Mxp7BD/colecci-nfiguras.jpg"
-          name="Colección de figuras"
-          price="16,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Figuras pitufos")}
-        />
-        <ProductCard
-          imageUrl="https://i.postimg.cc/T1kYdbgs/figuracocina.jpg"
-          name="Figura pitufo con cocina"
-          price="12,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Cocina pitufo")}
-        />
-        <ProductCard
-          imageUrl="https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png"
-          name="Taza de paisaje con pitufo"
-          price="12,00€"
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Paisaje pitufo")}
-        />
+          )
+        })}
+        
        </div>
 
-      <div>
-        <h3>Mis Favoritos</h3>
+      <h3>Mis Favoritos</h3>
+      <div className='fav-product'>
         <ul>
           {favorites.map((item, index) => (
             <li key={index}>
-              <img src={item.imageUrl} alt={item.name} style={{ width: '50px' }} />
+              <img src={item.imageUrl} alt={item.name} style={{ width: '60px' }} />
               <p>{item.name}</p>
               <p>{item.price}</p>
             </li>
