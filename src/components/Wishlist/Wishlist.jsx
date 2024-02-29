@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import './Homeview.css';
+import './Wishlist.css';
 
 // Componente de Producto
 function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked }) {
@@ -39,7 +39,6 @@ function Wishlist() {
   };
   return (
     <>
-    <img src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
       <h1>Productos más vendidos este mes</h1>
       <div className="best-sellers">
         {/* Renderizar instancias separadas de ProductCard para cada producto */}
