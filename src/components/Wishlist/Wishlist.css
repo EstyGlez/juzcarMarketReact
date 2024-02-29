@@ -3,21 +3,23 @@
     background-color: #EDF3F8;
     padding: 15px;
     border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
   
-  .product-image {
-    width: 100%;
-    height: auto;
+  .image-product {
+    width: 170px;
+    height: 170px;
     align-items: center;
     display: flex;
-    padding: 8px;
+    padding: 10px;
   }
   
   .product-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 8px;
+    padding-bottom: 2px;
   }
 
   .product-icon {
@@ -32,6 +34,11 @@
     justify-content: space-around;
   }
 
+  .new-add {
+    display: flex;
+    justify-content: space-around;
+  }
+
   /* @keyframes heartbeat {
   from {
     transform: scale(1);
@@ -41,9 +48,12 @@
   }
 } */
 
-h1 {
+h1, h2, h3 {
+  color: #FF635E;
   text-align: center;
   margin-bottom: 3rem;
   /* animation: heartbeat 1s infinite alternate; */
-  margin-top: 15px;
+  margin-top: 22px;
+  margin-bottom: 40px;
 }
+

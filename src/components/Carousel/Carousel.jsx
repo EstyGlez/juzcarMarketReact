@@ -12,7 +12,7 @@ function Carousel1() {
           src="https://i.postimg.cc/NjS6Z0nR/colaborador1.png"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption className='section-carousel'>
           <h5>Antonio Luis Jiménez</h5>
           <p>Realiza visitas guiadas al pueblo de Júzcar y se encarga realizar los enviíos de los pedidos por toda España</p>
         </Carousel.Caption>

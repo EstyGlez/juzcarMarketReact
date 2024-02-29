@@ -1,11 +1,12 @@
-import Carousel1 from "../../Carousel/Carousel";
+import React from 'react'
+import CardsForm from '../../cardsform/CardsForm.jsx'
 
-const UserProfile = ()=> {
+const UserProfile = () => {
   return (
     <div>
-      <h1>Soy UserProfile, tete</h1>
+      <CardsForm/>
     </div>
-  );
-};
+  )
+}
 
 export default UserProfile;

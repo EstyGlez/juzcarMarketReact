@@ -1,7 +1,32 @@
-.product-card {
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcedf7; /* Color de fondo del navbar */
+    padding: 10px;
+  }
+  
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-item label {
+    color: rgb(0, 142, 236); 
+    margin-left: 10px; 
+  }
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .product-card {
     width: 200px;
     background-color: #EDF3F8;
     padding: 15px;
+    margin: 10px;
     border-radius: 20px;
   }
   
@@ -20,10 +45,3 @@
     padding-top: 8px;
   }
   
-  .photo-mayor {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px; 
-  }

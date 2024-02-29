@@ -43,49 +43,58 @@
   ],
   "Products": [
     {
-      "id": "a8d8",
-      "title": "1",
-      "price": "a",
-      "description": "a",
-      "category": "aa",
-      "image": "https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png",
-      "stock": "1"
-    },
-    {
       "id": "b860",
-      "title": "v",
-      "price": "v",
-      "description": "v",
-      "category": "v",
+      "title": "Estatua Pitufina",
+      "price": "299",
+      "description": "Estatua gigante de pitufina de 3m de alto por 1.50m de ancho",
+      "category": "Estatuas",
       "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
-      "stock": "v"
+      "stock": "2"
     },
     {
       "id": "a0a3",
-      "title": "c",
-      "price": "c",
-      "description": "c",
-      "category": "c",
+      "title": "Puzle 20 piezas",
+      "price": "14.95",
+      "description": "Set de dos puzles. 20 piezas, ideal a partir de 2 años. Material cartón.",
+      "category": "Juguetes",
       "image": "https://i.postimg.cc/Wzw3C329/puzzlepitufos.jpg",
-      "stock": "c"
-    },
-    {
-      "id": "d5bb",
-      "title": "b",
-      "price": "b",
-      "description": "b",
-      "category": "b",
-      "image": "https://i.postimg.cc/C1z7S58w/vstrom3-1170x658.jpg",
-      "stock": "b"
+      "stock": "20"
     },
     {
       "id": "0195",
-      "title": "1",
-      "price": "1",
-      "description": "1",
-      "category": "1",
+      "title": "Camiseta Gruñón",
+      "price": "19.95",
+      "description": "Camiseta talla única, corresponde con una M/L. Composición algodón.",
+      "category": "Ropa",
       "image": "https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg",
-      "stock": "1"
+      "stock": "45"
+    },
+    {
+      "id": "6fd4",
+      "title": "Body bebé  Algodón",
+      "price": "12.95",
+      "description": "algodón 100%. Talla única(aprox.12 meses) Corchetes de plástico.",
+      "category": "Ropa",
+      "image": "https://i.postimg.cc/TPmwVpvy/bodybeb.jpg",
+      "stock": "18"
+    },
+    {
+      "id": "99b3",
+      "title": "Pack de tres peluches",
+      "price": "24.95",
+      "description": "Set de peluches que incluye: Papá pitufo, Pitufina y Tontín. Medidas: 15cm",
+      "category": "Juguetes",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.E8aBlCQcBW5C8J8VC_fP2wHaHa&pid=Api&P=0&h=180",
+      "stock": "28"
+    },
+    {
+      "id": "e413",
+      "title": "Papá Pitufo XXL",
+      "price": "9.95",
+      "description": "Peluche Papá Pitufo 12cm. Viene con una anilla para usar de llavero.",
+      "category": "Juguetes",
+      "image": "http://www.aceroymagia.com/Images/articulo/peluche-papa-pitufo/01-peluche-papa-pitufo.jpg",
+      "stock": "24"
     }
   ]
 }

@@ -23,13 +23,17 @@ function ProductCard({
     }
   };
 
+  const handleCartClick = () => {
+    openLoginModal();
+  };
+
   return (
     <div
       className="product-card"
       onClick={() => onProductSelect({ imageUrl, name, price, description })}
     >
-      <img src={imageUrl} alt="Producto" className="product-image" />
-      <h5>{name}</h5>
+      <img src={imageUrl} alt="Producto" className="image-product" />
+      <h5 className="product-info">{name}</h5>
       <p>{price}</p>
       <button className="heart-button" onClick={handleLikeClick}>
         <FontAwesomeIcon
@@ -37,10 +41,9 @@ function ProductCard({
           style={{ color: isLiked ? "#FF635E" : "#44BAD3" }}
         />
       </button>
-      <FontAwesomeIcon
-        icon={faShoppingCart}
-        style={{ marginLeft: "10px", color: "#44BAD3" }}
-      />
+      <button className="cart-button" onClick={handleCartClick}>
+        <FontAwesomeIcon icon={faShoppingCart} style={{ marginLeft: '10px', color: '#44BAD3' }} />
+      </button>
     </div>
   );
 }
@@ -51,7 +54,7 @@ function Wishlist() {
   const [showModal, setShowModal] = useState(false);
 
   const addToFavorites = (product) => {
-    setFavorites([...favorites, product]);
+    setFavorites(prevFavorites => [...prevFavorites, product]);
   };
 
   const removeFromFavorites = (productName) => {
@@ -72,7 +75,7 @@ function Wishlist() {
 
   return (
     <>
-      <h1>Productos más vendidos este mes</h1>
+      <h2>Productos más vendidos este mes</h2>
       <div className="best-sellers">
         <ProductCard
           imageUrl="https://i.postimg.cc/TPmwVpvy/bodybeb.jpg"
@@ -104,12 +107,20 @@ function Wishlist() {
           isLiked={favorites.some((item) => item.name === "Figura pitufina")}
           onProductSelect={handleProductSelect}
         />
+        <ProductCard
+          imageUrl=" https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg"
+          name="Camiseta negra de hombre"
+          price="10,00€"
+          addToFavorites={addToFavorites}
+          removeFromFavorites={removeFromFavorites}
+          isLiked={favorites.some(item => item.name === "Remera pitufo")}
+        />
       </div>
       {showModal && selectedProduct && (
         <ProductModal product={selectedProduct} closeModal={closeModal} />
       )}
       <div>
-        <h1>Mis Favoritos</h1>
+        <h3>Mis Favoritos</h3>
         <ul>
           {favorites.map((item, index) => (
             <li key={index}>
