@@ -16,6 +16,7 @@ function App() {
       <HomeView/>
       <UserProfile/>
       <Footer />
+      <Footer />
     </>
   )
 }

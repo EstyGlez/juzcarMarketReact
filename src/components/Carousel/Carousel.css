@@ -1,0 +1,14 @@
+.carousel-content{
+    display: flex;
+    justify-content: end;
+    align-self: flex-start;
+    margin: 0 auto;
+    min-width: 40%; /* Ajusta este valor a tu gusto */
+    max-width: 50%; /* Ajusta este valor a tu gusto */
+
+  }
+  .carousel-caption, h5, p{
+    color: #44BAD3;
+    font-weight: bold;
+  }
+  

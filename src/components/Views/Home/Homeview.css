@@ -1,0 +1,180 @@
+.home-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-card {
+  width: 200px;
+  background-color: #EDF3F8;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25%;
+  color: #44BAD3;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  display: flex;
+  padding: 8px;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.photo-mayor {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.photo-pitufos {
+  size: 300px;
+  margin: 10px;
+  width: 100%;
+
+}
+
+.home-view-photo {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation-name: show;
+  animation-duration: 2s;
+  background-size: cover;
+  width: 100%;
+  background-size: cover;
+}
+
+.home-view-photo-responsive {
+  display: none;
+
+  background-size: cover;
+
+}
+
+.home-view-title {
+  color: #44BAD3;
+  margin-top: 40px;
+  align-self: flex-start;
+}
+
+.colab-section-img {
+  display: flex;
+  align-items: center;
+}
+
+.colab-text {
+  color: #44BAD3;
+  font-size: 20px;
+  margin: 5%;
+  background-color: #EDF3F8;
+  padding: 20px;
+  font-display: initial;
+  border-radius: 20px;
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 30%;
+  display: contents;
+  color: #44BAD3;
+}
+
+.carousel-indicators {
+  display: none;
+}
+.carousel-control-next-icon{
+  color: #44BAD3;
+}
+.pitufo-dad {
+  height: 200px;
+  margin-left: 0px;
+  opacity: 80%;
+}
+
+.photo-mayor-responsive {
+  display: none
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: scale(0.24);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.carousel-caption {
+  font-size: smaller;
+}
+
+@media screen and (max-width: 768px) {
+  .home-view-photo {
+    display: none;
+  }
+
+  .home-view-photo-responsive {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+
+  .carousel-caption h5 {
+    font-size: small;
+    font-weight: bold;
+  }
+
+  .carousel-caption p {
+    font-size: smaller;
+  }
+
+  .photo-mayor {
+    display: none;
+  }
+
+  .photo-mayor-responsive {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .colab-text {
+    font-size:8pt;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  .photo-pitufos {
+    width: 100%;
+    margin: 20px;
+
+  }
+}
