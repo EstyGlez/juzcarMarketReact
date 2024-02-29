@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel1 from "../../Carousel/Carousel";
+import Wishlist from '../../Wishlist/Wishlist';
 import './Homeview.css';
 
 const HomeView = () => {
