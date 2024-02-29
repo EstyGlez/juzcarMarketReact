@@ -55,9 +55,29 @@
   }
   .home-view-title{
     color: #44BAD3;
-    margin: 40px;
+   margin-top: 40px;
     align-self: flex-start;
   }
+  .colab-section-img {
+    display: flex; 
+    align-items: center; 
+}
+
+.colab-text {
+    color: #44BAD3;
+    font-size: 20px;
+    margin: 5%;
+    background-color: #EDF3F8;
+    padding: 20px;
+    border-radius: 20px;
+    font-display: initial;
+}
+
+.pitufo-dad {
+    height: 200px;
+    margin-left: 0px; 
+    opacity: 80%;
+}
 
   @keyframes show {
     from {

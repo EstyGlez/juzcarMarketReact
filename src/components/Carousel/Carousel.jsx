@@ -5,7 +5,7 @@ import "./Carousel.css";
 function Carousel1() {
   return (
     
-    <Carousel data-bs-theme="dark">
+    <Carousel data-bs-theme="dark" className='carousel-content ml-auto'>
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -42,6 +42,7 @@ function Carousel1() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    
   );
 }
 
