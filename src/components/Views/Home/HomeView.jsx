@@ -11,7 +11,7 @@ const HomeView = () => {
   return (
     <div className='home-view'>
         <img className='home-view-photo' src="https://i.postimg.cc/Ss5SPGVD/pisajej-zcar-1-1.png" alt="" />
-
+        <img className='home-view-photo-responsive' src="https://i.postimg.cc/DZQ8tMRW/Que-ver-en-Juzcar-RESPONSIVE-1-1.png" alt="" />
         <h1 className='home-view-title'>Colaboradores</h1>
          <div className='colab-section'> 
          <section className='colab-section-img'>
@@ -31,7 +31,10 @@ const HomeView = () => {
       </div>
       
       <img className='photo-pitufos'src="https://i.postimg.cc/fW2TtMNY/pngwing-com-1.png" alt="" />
+      
+
        <img className='photo-mayor' src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
+       <img className='photo-mayor-responsive' src="https://i.postimg.cc/Hnvc2Prf/alcalde-RESPONSIVE-1.png" alt="" />
        
     </div>
   );
