@@ -3,6 +3,8 @@
     background-color: #EDF3F8;
     padding: 15px;
     border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
   
   .image-product {
@@ -32,19 +34,26 @@
     justify-content: space-around;
   }
 
-  @keyframes heartbeat {
+  .new-add {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* @keyframes heartbeat {
   from {
     transform: scale(1);
   }
   to {
     transform: scale(1.1);
   }
-}
+} */
 
-h1 {
+h1, h2, h3 {
+  color: #FF635E;
   text-align: center;
   margin-bottom: 3rem;
-  animation: heartbeat 1s infinite alternate;
-  margin-top: 15px;
+  /* animation: heartbeat 1s infinite alternate; */
+  margin-top: 22px;
+  margin-bottom: 40px;
 }
 

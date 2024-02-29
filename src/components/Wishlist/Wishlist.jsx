@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Wishlist.css';
-import LoginModal from '../LoginModal/Loginmodal';
 
 // Componente de Producto
-function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked, openLoginModal }) {
+function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked }) {
   const handleLikeClick = () => {
     if (isLiked) {
       removeFromFavorites(name);
@@ -15,7 +14,7 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
   };
 
   const handleCartClick = () => {
-    openLoginModal(); // Llama a la función openLoginModal cuando se hace clic en el botón del carrito
+    openLoginModal();
   };
 
   return (
@@ -34,29 +33,20 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
 }
 
 function Wishlist() {
-  const [favorites, setFavorites] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [favorites, setFavorites] = React.useState([]);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const addToFavorites = (product) => {
-    setFavorites([...favorites, product]);
+    setFavorites(prevFavorites => [...prevFavorites, product]);
   };
 
   const removeFromFavorites = (productName) => {
-    const updatedFavorites = favorites.filter(item => item.name !== productName);
-    setFavorites(updatedFavorites);
-  };
-
-  const openLoginModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeLoginModal = () => {
-    setIsModalOpen(false);
+    setFavorites(prevFavorites => prevFavorites.filter(item => item.name !== productName));
   };
 
   return (
     <>
-      <h1>Productos más vendidos este mes</h1>
+      <h2>Productos más vendidos este mes</h2>
       <div className="best-sellers">
         {/* Renderizar instancias separadas de ProductCard para cada producto */}
         <ProductCard
@@ -66,7 +56,6 @@ function Wishlist() {
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
           isLiked={favorites.some(item => item.name === "Body bebé pitufo")}
-          openLoginModal={openLoginModal} // Pasar openLoginModal como prop al ProductCard
         />
         <ProductCard
           imageUrl="https://i.postimg.cc/JnJt3xSC/peluchepitufo.jpg"
@@ -75,7 +64,6 @@ function Wishlist() {
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
           isLiked={favorites.some(item => item.name === "Peluche pitufo")}
-          openLoginModal={openLoginModal} // Pasar openLoginModal como prop al ProductCard
         />
         <ProductCard
           imageUrl="https://i.postimg.cc/fTLRHHhQ/figurapitufina.jpg"
@@ -84,7 +72,6 @@ function Wishlist() {
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
           isLiked={favorites.some(item => item.name === "Figura pitufina")}
-          openLoginModal={openLoginModal} // Pasar openLoginModal como prop al ProductCard
         />
         <ProductCard
           imageUrl=" https://i.postimg.cc/sXr2ws3T/camisetahombre.jpg"
@@ -92,12 +79,48 @@ function Wishlist() {
           price="10,00€"
           addToFavorites={addToFavorites}
           removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === "Figura pitufina")}
-          openLoginModal={openLoginModal} // Pasar openLoginModal como prop al ProductCard
+          isLiked={favorites.some(item => item.name === "Remera pitufo")}
         />
       </div>
+
+      <h2>Productos recientemente añadidos</h2>
+       <div className='new-add'>
+        <ProductCard
+          imageUrl="https://i.postimg.cc/G2xmfV2d/camisetamujer.jpg"
+          name="Camiseta negra de mujer"
+          price="12,00€"
+          addToFavorites={addToFavorites}
+          removeFromFavorites={removeFromFavorites}
+          isLiked={favorites.some(item => item.name === "Remera pitufa")}
+        />
+        <ProductCard
+          imageUrl="https://i.postimg.cc/C5Mxp7BD/colecci-nfiguras.jpg"
+          name="Colección de figuras"
+          price="16,00€"
+          addToFavorites={addToFavorites}
+          removeFromFavorites={removeFromFavorites}
+          isLiked={favorites.some(item => item.name === "Figuras pitufos")}
+        />
+        <ProductCard
+          imageUrl="https://i.postimg.cc/T1kYdbgs/figuracocina.jpg"
+          name="Figura pitufo con cocina"
+          price="12,00€"
+          addToFavorites={addToFavorites}
+          removeFromFavorites={removeFromFavorites}
+          isLiked={favorites.some(item => item.name === "Cocina pitufo")}
+        />
+        <ProductCard
+          imageUrl="https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png"
+          name="Taza de paisaje con pitufo"
+          price="12,00€"
+          addToFavorites={addToFavorites}
+          removeFromFavorites={removeFromFavorites}
+          isLiked={favorites.some(item => item.name === "Paisaje pitufo")}
+        />
+       </div>
+
       <div>
-        <h1>Mis Favoritos</h1>
+        <h3>Mis Favoritos</h3>
         <ul>
           {favorites.map((item, index) => (
             <li key={index}>
@@ -107,7 +130,6 @@ function Wishlist() {
             </li>
           ))}
         </ul>
-        {isModalOpen && <LoginModal onClose={closeLoginModal} />}
       </div>
     </>
   );
