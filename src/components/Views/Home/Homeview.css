@@ -1,0 +1,94 @@
+.home-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.product-card {
+    width: 200px;
+    background-color: #EDF3F8;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+  }
+  
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+  }
+  
+  .photo-mayor {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+  }
+  .photo-pitufos{
+    size: 300px;
+    margin: 10px;
+    
+  }
+  
+  .home-view-photo{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px; 
+    animation-name: show;
+    animation-duration: 2s; 
+  }
+  .home-view-title{
+    color: #44BAD3;
+   margin-top: 40px;
+    align-self: flex-start;
+  }
+  .colab-section-img {
+    display: flex; 
+    align-items: center; 
+}
+
+.colab-text {
+    color: #44BAD3;
+    font-size: 20px;
+    margin: 5%;
+    background-color: #EDF3F8;
+    padding: 20px;
+    border-radius: 20px;
+    font-display: initial;
+}
+
+.pitufo-dad {
+    height: 200px;
+    margin-left: 0px; 
+    opacity: 80%;
+}
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      transform: scale(0.24);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
