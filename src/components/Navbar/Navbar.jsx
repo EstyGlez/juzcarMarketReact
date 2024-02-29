@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Loginmodal from "../LoginModal/Loginmodal";
 import { Container, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -11,11 +12,13 @@ function NavBar() {
       <Navbar className="navbarStyle">
         <Container>
           <Navbar.Brand href="#home">
-            <img
-              src="src\assets\juzcarLogo.png"
-              className="juzgar-logo"
-              alt="Logo de Júzcar"
-            />
+            <NavLink to='/'>
+              <img
+                src="src\assets\juzcarLogo.png"
+                className="juzgar-logo"
+                alt="Logo de Júzcar"
+              />
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end navbar-style">
