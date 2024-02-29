@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import './cardsForm.css'
 import userService from '../../../userService.js'
 
@@ -12,6 +12,10 @@ const Product = () => {
     image: null,
     stock: '',
   });
+
+  const [isEditing, setIsEditing] = useState(false);
+  const formRef = useRef(null); 
+
 
   useEffect(() => {
     fetchData();
@@ -29,20 +33,34 @@ const Product = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await userService.addProduct(newProduct);
-      alert('Producto agregado exitosamente');
+      if (newProduct.id) {
+        await userService.updateProduct(newProduct.id, newProduct);
+        alert('Producto actualizado exitosamente');
+      } else {
+        await userService.addProduct(newProduct);
+        alert('Producto agregado exitosamente');
+      }
       setNewProduct({
         title: '',
         price: '',
         description: '',
         category: '',
-        image: null,
+        image: '',
         stock: '',
       });
-      fetchData(); 
+      setIsEditing(false); // Cambiar a modo de agregar producto después de guardar
+      fetchData();
     } catch (error) {
-      console.error('Error al agregar producto:', error);
+      console.error('Error al guardar producto:', error);
     }
+  };
+
+  const handleEdit = async (productId) => {
+    const productToEdit = productos.find((producto) => producto.id === productId);
+    setNewProduct(productToEdit);
+    setIsEditing(true); // Cambiar a modo de edición al hacer clic en editar
+    // Desplazarse hacia el formulario
+    formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleDelete = async (productId) => {
@@ -58,7 +76,7 @@ const Product = () => {
   return (
     <div>
       
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <label htmlFor="title">Título:</label>
         <input
           type="text"
@@ -120,21 +138,24 @@ const Product = () => {
     
 
 
-        <button type="submit">Agregar Proucto</button>
+        <button type="submit">
+            {isEditing ? 'Actualizar Producto': 'Agregar Producto'}
+        </button>
       </form>
 
 
       {productos.map((producto) => (
         <div key={producto.id} className="product-card">
           <h3>{producto.title}</h3>
-          <p>Precio: {producto.price}</p>
-          <p>Descripción: {producto.description}</p>
-          <p>Categoría: {producto.category}</p>
           <img src={producto.image} alt={producto.title} width={100}
             height={100}></img>
+          <p>Precio: {producto.price}€</p>
+          <p>Descripción: {producto.description}</p>
+          <p>Categoría: {producto.category}</p>
+          
           <p>Stock: {producto.stock}</p>
+          <button onClick={() => handleEdit(producto.id)}>Editar</button>
           <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
-          <button onClick={() => handleSubmit(producto.id)}>Editar</button>
         </div>
       ))}
     </div>

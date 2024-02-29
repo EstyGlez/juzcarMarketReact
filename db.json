@@ -34,10 +34,10 @@
   "Products": [
     {
       "id": "a8d8",
-      "title": "1",
-      "price": "a",
+      "title": "Súper Taza Cerámica",
+      "price": "pitufea",
       "description": "a",
-      "category": "aa",
+      "category": "qqq",
       "image": "https://i.postimg.cc/ZY8CCfrr/tazapaisajepitufo.png",
       "stock": "1"
     },
@@ -85,6 +85,33 @@
       "category": "p",
       "image": "https://i.postimg.cc/TPmwVpvy/bodybeb.jpg",
       "stock": "2"
+    },
+    {
+      "id": "99b3",
+      "title": "Peluche",
+      "price": "Pitufístico",
+      "description": "suavecito",
+      "category": "Peluches",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.E8aBlCQcBW5C8J8VC_fP2wHaHa&pid=Api&P=0&h=180",
+      "stock": "50"
+    },
+    {
+      "id": "e413",
+      "title": "Papá Pitufo",
+      "price": "y",
+      "description": "y",
+      "category": "y",
+      "image": "http://www.aceroymagia.com/Images/articulo/peluche-papa-pitufo/01-peluche-papa-pitufo.jpg",
+      "stock": "y"
+    },
+    {
+      "id": "a349",
+      "title": "efewf",
+      "price": "14",
+      "description": "ferferfer",
+      "category": "s",
+      "image": "https://http2.mlstatic.com/pelucia-plush-smurf-smurfette-26cm-sunny-original-D_NQ_NP_799625-MLB25478806325_042017-F.jpg",
+      "stock": "60"
     }
   ]
 }
