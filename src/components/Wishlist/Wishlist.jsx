@@ -68,7 +68,7 @@ function Wishlist() {
         />
       </div>
       <div>
-        <h2>Mis Favoritos</h2>
+        <h1>Mis Favoritos</h1>
         <ul>
           {favorites.map((item, index) => (
             <li key={index}>
