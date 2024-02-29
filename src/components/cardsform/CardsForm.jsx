@@ -47,7 +47,7 @@ const Product = () => {
         image: '',
         stock: '',
       });
-      setIsEditing(false); // Cambiar a modo de agregar producto después de guardar
+      setIsEditing(false); 
       fetchData();
     } catch (error) {
       console.error('Error al guardar producto:', error);
@@ -57,8 +57,7 @@ const Product = () => {
   const handleEdit = async (productId) => {
     const productToEdit = productos.find((producto) => producto.id === productId);
     setNewProduct(productToEdit);
-    setIsEditing(true); // Cambiar a modo de edición al hacer clic en editar
-    // Desplazarse hacia el formulario
+    setIsEditing(true); 
     formRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -83,13 +82,13 @@ const Product = () => {
 
   const filteredProductos = productos.filter((producto) => {
     if (categoriasSeleccionadas.length === 0) {
-      return true; // Mostrar todos los productos si no se ha seleccionado ninguna categoría
+      return true; 
     } else {
       return categoriasSeleccionadas.includes(producto.category);
     }
   });
 
-  const categorias = ['Ropa', 'Juguetes', 'Estatuas']; // Definición de las categorías
+  const categorias = ['Ropa', 'Juguetes', 'Estatuas']; 
 
   return (
     <div>
