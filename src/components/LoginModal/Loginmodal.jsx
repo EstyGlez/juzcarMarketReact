@@ -53,12 +53,16 @@ const LoginModal = () => {
 
   return (
     <div className="App">
-      <button onClick={() => setShowModal(true)}>Inicia Sesión o Regístrate</button>
+      <button className="btn-user" onClick={() => setShowModal(true)}>
+        <img src="src\assets\icon-user.svg" className="icon-user mx-3" alt="" />
+      </button>
       {showModal && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={() => setShowModal(false)}>&times;</span>
-            <h2>{newUser ? 'Registrarse' : 'Iniciar Sesión'}</h2>
+            <span className="close" onClick={() => setShowModal(false)}>
+              &times;
+            </span>
+            <h2>{newUser ? "Registrarse" : "Iniciar Sesión"}</h2>
             <form onSubmit={newUser ? handleRegister : handleLogin}>
               {newUser && (
                 <>
@@ -120,12 +124,16 @@ const LoginModal = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button type="submit">{newUser ? 'Registrarse' : 'Iniciar Sesión'}</button>
+              <button type="submit">
+                {newUser ? "Registrarse" : "Iniciar Sesión"}
+              </button>
             </form>
             {!newUser && (
               <p>
-                ¿Todavía no estás registrado?{' '}
-                <button onClick={() => setNewUser(true)}>Regístrate aquí</button>
+                ¿Todavía no estás registrado?{" "}
+                <button onClick={() => setNewUser(true)}>
+                  Regístrate aquí
+                </button>
               </p>
             )}
           </div>

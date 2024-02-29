@@ -2,6 +2,12 @@
     text-align: center;
     padding: 20px;
   }
+
+.btn-user{
+  background-color: #44BAD3;
+  border: none;
+  width: 60px;
+}
   
   .modal {
     display: block; 

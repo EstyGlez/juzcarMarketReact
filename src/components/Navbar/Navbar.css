@@ -21,8 +21,7 @@
   border: none;
 }
 
-
-
-.icon-user, .icon-shop {
-  padding-inline: px;
+.navbar-icons{
+  display: flex;
+  align-items: center;
 }
