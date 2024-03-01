@@ -45,7 +45,6 @@ function Wishlist() {
     <>
       <h2>Productos más vendidos este mes</h2>
       <div className="best-sellers">
-        {/* Renderizar instancias separadas de ProductCard para cada producto */}
         {products.map(product => {
           return(
             <ProductCard
