@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Wishlist.css';
 import { products, newproduct } from './Wishlist.const';
+import Swal from 'sweetalert2';
 
 function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorites, isLiked }) {
   const handleLikeClick = () => {
@@ -10,7 +11,12 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       removeFromFavorites(name);
     } else {
       addToFavorites({ imageUrl, name, price });
+      Swal.fire('¡Producto agregado a tus favoritos!', '', 'success'); // SweetAlert para agregar a favoritos
     }
+  };
+
+  const handleCartClick = () => {
+    Swal.fire('','¡Aún no has iniciado sesión!', '', 'warning'); // SweetAlert para iniciar sesión
   };
 
 

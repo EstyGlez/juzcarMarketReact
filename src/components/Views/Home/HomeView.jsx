@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel1 from "../../Carousel/Carousel";
 import Wishlist from '../../Wishlist/Wishlist';
 import './Homeview.css';
-import Wishlist from '../../Wishlist/Wishlist.jsx'
 
 const HomeView = () => {
   const imageUrl = "https://i.postimg.cc/TPmwVpvy/bodybeb.jpg"; 
