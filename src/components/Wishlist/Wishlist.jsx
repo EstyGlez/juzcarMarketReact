@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2'; // Importar SweetAlert2
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Wishlist.css';
@@ -10,14 +11,25 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       removeFromFavorites(name);
     } else {
       addToFavorites({ imageUrl, name, price });
-      Swal.fire('¡Producto agregado a tus favoritos!', '', 'success'); // SweetAlert para agregar a favoritos
+      // Mostrar SweetAlert2 cuando se agrega a favoritos
+      Swal.fire({
+        icon: 'success',
+        title: '¡Producto agregado a tus favoritos!',
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
   };
 
   const handleCartClick = () => {
-    Swal.fire('','¡Aún no has iniciado sesión!', '', 'warning'); // SweetAlert para iniciar sesión
+    // Mostrar SweetAlert2 cuando se presiona el botón del carrito
+    Swal.fire({
+      icon: 'error',
+      title: '¡Aún no has iniciado sesión!',
+      text: 'Por favor, inicia sesión para acceder al carrito.',
+      showConfirmButton: true,
+    });
   };
-
 
   return (
     <div className="product-card">
@@ -53,13 +65,13 @@ function Wishlist() {
         {products.map(product => {
           return(
             <ProductCard
-          imageUrl={product.imageURL}
-          name={product.name}
-          price={product.price}
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === product.name)}
-        />
+              imageUrl={product.imageURL}
+              name={product.name}
+              price={product.price}
+              addToFavorites={addToFavorites}
+              removeFromFavorites={removeFromFavorites}
+              isLiked={favorites.some(item => item.name === product.name)}
+            />
           )
         })}
         
@@ -70,13 +82,13 @@ function Wishlist() {
         {newproduct.map(newproduct => {
           return(
             <ProductCard
-          imageUrl={newproduct.imageURL}
-          name={newproduct.name}
-          price={newproduct.price}
-          addToFavorites={addToFavorites}
-          removeFromFavorites={removeFromFavorites}
-          isLiked={favorites.some(item => item.name === newproduct.name)}
-        />
+              imageUrl={newproduct.imageURL}
+              name={newproduct.name}
+              price={newproduct.price}
+              addToFavorites={addToFavorites}
+              removeFromFavorites={removeFromFavorites}
+              isLiked={favorites.some(item => item.name === newproduct.name)}
+            />
           )
         })}
         
