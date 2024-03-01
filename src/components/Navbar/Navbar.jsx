@@ -11,7 +11,7 @@ function NavBar() {
     <>
       <Navbar className="navbarStyle">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="#home"> /*el warning de inspector es porque se supone que este div sobra*/
             <NavLink to='/'>
               <img
                 src="src\assets\juzcarLogo.png"
@@ -19,7 +19,7 @@ function NavBar() {
                 alt="Logo de Júzcar"
               />
             </NavLink>
-          </Navbar.Brand>
+          </Navbar.Brand> /*el warning de inspector es porque se supone que este div sobra*/
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end navbar-style">
             <Button className="add-product mx-4">Subir producto</Button>
