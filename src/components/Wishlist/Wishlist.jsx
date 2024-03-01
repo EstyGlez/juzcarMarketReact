@@ -11,12 +11,20 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       removeFromFavorites(name);
     } else {
       addToFavorites({ imageUrl, name, price });
-      Swal.fire('¡Producto agregado a tus favoritos!', '', 'success'); // SweetAlert para agregar a favoritos
+      Swal.fire({
+    html: '<img src="https://i.postimg.cc/NMkNBq0M/pitufo-coqueto.png" style="max-width: 35%;" />',
+    title: '¡Producto agregado a tus favoritos!',
+    confirmButtonText: 'Aceptar'
+  });
     }
   };
 
   const handleCartClick = () => {
-    Swal.fire('','¡Aún no has iniciado sesión!', '', 'warning'); // SweetAlert para iniciar sesión
+    Swal.fire({
+    html: '<img src="https://i.postimg.cc/wjn4kQP6/pitufo-enojado.png" style="max-width: 35%;" />',
+    title: '¡Aún no has iniciado sesión!',
+    confirmButtonText: 'Aceptar'
+  });
   };
 
 
