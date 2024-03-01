@@ -4,10 +4,7 @@ import Wishlist from '../../Wishlist/Wishlist';
 import './Homeview.css';
 
 const HomeView = () => {
-  const imageUrl = "https://i.postimg.cc/TPmwVpvy/bodybeb.jpg"; 
-  const price = "20,00€"; 
-  const title = "Body bebé pitufo"; 
-  const shoppingCart = "src/assets/carritocard.svg";
+
 
   return (
     <div>
