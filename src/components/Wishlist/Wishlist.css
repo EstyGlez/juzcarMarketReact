@@ -34,9 +34,14 @@
     justify-content: space-around;
   }
 
-  .new-add {
+  .new-product {
     display: flex;
     justify-content: space-around;
+  }
+
+  .fav-product {
+    display: flex;
+    justify-content: center;
   }
 
   /* @keyframes heartbeat {
