@@ -37,7 +37,6 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
 
 function Wishlist() {
   const [favorites, setFavorites] = React.useState([]);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const addToFavorites = (product) => {
     setFavorites(prevFavorites => [...prevFavorites, product]);
