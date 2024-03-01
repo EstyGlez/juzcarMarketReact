@@ -37,7 +37,7 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
         <FontAwesomeIcon icon={faHeart} style={{ color: isLiked ? '#FF635E' : '#44BAD3' }} />
       </button>
       <button className="cart-button" onClick={handleCartClick}>
-        <FontAwesomeIcon icon={faShoppingCart} style={{ marginLeft: '10px', color: '#44BAD3' }} />
+        <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
       </button>
     </div>
   );
