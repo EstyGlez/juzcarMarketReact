@@ -23,17 +23,13 @@ const HomeView = () => {
           </section>
       <Carousel1/> 
       </div>
-      
       <img className='photo-pitufos'src="https://i.postimg.cc/fW2TtMNY/pngwing-com-1.png" alt="" />
       
-
-       <img className='photo-mayor' src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
-       <img className='photo-mayor-responsive' src="https://i.postimg.cc/Hnvc2Prf/alcalde-RESPONSIVE-1.png" alt="" />
-       
       </div>
       
       <Wishlist />
-
+      <img className='photo-mayor' src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="" />
+       <img className='photo-mayor-responsive' src="https://i.postimg.cc/Hnvc2Prf/alcalde-RESPONSIVE-1.png" alt="" />
     </div>
   )
 }

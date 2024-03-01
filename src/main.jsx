@@ -7,6 +7,8 @@ import "./index.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import My3DModel from "./components/model3D/Model3d.jsx";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -15,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/" element={<HomeView />} />
       <Route path="/UserProfile" element={<UserProfile />} />
     </Routes>
+    <My3DModel/>
     <Footer />
   </BrowserRouter>
 );
