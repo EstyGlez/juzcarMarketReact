@@ -7,11 +7,6 @@
   max-width: 1200px;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url('https://i.postimg.cc/vZgQ4scq/smurfette-1-1.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: size 25%;
-  background-position: right; */
  
 }
 .product-card {
@@ -118,10 +113,6 @@
   margin-left: 20px;
   opacity: 80%;
 }
-
-
-
-
 .photo-mayor-responsive {
   display: none
 }
@@ -142,6 +133,8 @@
 .carousel-caption {
   font-size: smaller;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .home-view-photo {
@@ -186,7 +179,13 @@
     margin: 20px;
 
   }
+  .best-sellers, 
+  .new-product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+  
 
 }
   
-  
+}

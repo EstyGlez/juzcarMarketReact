@@ -36,12 +36,14 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       <img src={imageUrl} alt="Producto" className="image-product" />
       <h5 className="product-info">{name}</h5>
       <p>{price}</p>
-      <button className="heart-button" onClick={handleLikeClick}>
-        <FontAwesomeIcon icon={faHeart} style={{ color: isLiked ? '#FF635E' : '#44BAD3' }} />
-      </button>
-      <button className="cart-button" onClick={handleCartClick}>
-        <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
-      </button>
+      <div className='card-btn'>
+        <button className="heart-button" onClick={handleLikeClick}>
+          <FontAwesomeIcon icon={faHeart} style={{ color: isLiked ? '#FF635E' : '#44BAD3' }} />
+        </button>
+        <button className="cart-button" onClick={handleCartClick}>
+          <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
+        </button>
+      </div>
     </div>
   );
 }
