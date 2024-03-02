@@ -201,8 +201,10 @@ const Product = () => {
             <p>Categoría: {producto.category}</p>
 
             <p>Stock: {producto.stock}</p>
-            <button onClick={() => handleEdit(producto.id)}>Editar</button>
-            <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
+            <div>
+              <button className='btn-cardForm-edit' onClick={() => handleEdit(producto.id)}>Editar</button>
+              <button className='btn-cardForm-delete'onClick={() => handleDelete(producto.id)}>Eliminar</button>
+            </div>
           </div>
         ))}
       </div>

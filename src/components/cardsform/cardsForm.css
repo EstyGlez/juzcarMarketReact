@@ -92,3 +92,18 @@ text-align: center;
   align-items: center;
   padding-top: 8px;
 }
+.btn-cardForm-edit, .btn-cardForm-delete{
+  border-radius: 30px;
+  background-color: #44BAD3;
+  color: #44BAD3;
+  border: none;
+  color: white;
+  width: 100px;
+  margin: 3px;
+  padding: 6px;
+  transition: background-color 0.5s;
+}
+
+.btn-cardForm-edit:hover, .btn-cardForm-delete:hover {
+  background-color: #0d6efd;
+}
