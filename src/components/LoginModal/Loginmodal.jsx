@@ -62,6 +62,7 @@ const LoginModal = () => {
             <span className="close" onClick={() => setShowModal(false)}>
               &times;
             </span>
+            <img className='modal-photo'src="https://i.postimg.cc/bwY00vtc/Property-1-OIG3-removebg-preview-1-1.png" alt="" />
             <h2>{newUser ? "Registrarse" : "Iniciar Sesión"}</h2>
             <form onSubmit={newUser ? handleRegister : handleLogin}>
               {newUser && (
@@ -124,14 +125,14 @@ const LoginModal = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <button type="submit">
+              <button type="submit" className='button-submit'>
                 {newUser ? "Registrarse" : "Iniciar Sesión"}
               </button>
             </form>
             {!newUser && (
               <p>
                 ¿Todavía no estás registrado?{" "}
-                <button onClick={() => setNewUser(true)}>
+                <button className='button-register' onClick={() => setNewUser(true)}>
                   Regístrate aquí
                 </button>
               </p>
