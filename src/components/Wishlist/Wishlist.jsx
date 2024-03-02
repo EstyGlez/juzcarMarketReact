@@ -49,6 +49,7 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
 function Wishlist() {
   const [favorites, setFavorites] = React.useState([]);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+ 
 
   const addToFavorites = (product) => {
     setFavorites(prevFavorites => [...prevFavorites, product]);
@@ -94,20 +95,23 @@ function Wishlist() {
         
        </div>
 
-      <h3>Mis Favoritos</h3>
-      <div className='fav-product'>
-        <ul>
-          {favorites.map((item, index) => (
-            <li key={index}>
-              <img src={item.imageUrl} alt={item.name} style={{ width: '60px' }} />
-              <p>{item.name}</p>
-              <p>{item.price}</p>
-            </li>
-          ))}
-        </ul>
+       <h3>Mis Favoritos</h3>
+      <div className='fav-products-form'>
+        <div className={`fav-product ${favorites.length > 0 ? 'with-favorites' : ''}`}>
+          <ul>
+            {favorites.map((item, index) => (
+              <li key={index}>
+                <img src={item.imageUrl} alt={item.name} style={{ width: '60px' }} />
+                <p>{item.name}</p>
+                <p>{item.price}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
 }
+
 
 export default Wishlist;
