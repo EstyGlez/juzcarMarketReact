@@ -105,9 +105,10 @@ const Product = () => {
           </div>
         
         ))}
-      </div>
+      </div >
 
-      <form ref={formRef} onSubmit={handleSubmit}>
+    <div className='add-product'>
+      <form className='Form-add-product' ref={formRef} onSubmit={handleSubmit}>
         <label htmlFor="title">Título:</label>
         <input
           type="text"
@@ -178,10 +179,12 @@ const Product = () => {
           required
         />
 
-        <button type="submit">
+        <button className='button-add-product' type="submit">
           {isEditing ? "Actualizar Producto" : "Agregar Producto"}
         </button>
       </form>
+
+      </div>
 
       <div className="product-list">
         {filteredProductos.map((producto) => (
@@ -198,8 +201,10 @@ const Product = () => {
             <p>Categoría: {producto.category}</p>
 
             <p>Stock: {producto.stock}</p>
-            <button onClick={() => handleEdit(producto.id)}>Editar</button>
-            <button onClick={() => handleDelete(producto.id)}>Eliminar</button>
+            <div>
+              <button className='btn-cardForm-edit' onClick={() => handleEdit(producto.id)}>Editar</button>
+              <button className='btn-cardForm-delete'onClick={() => handleDelete(producto.id)}>Eliminar</button>
+            </div>
           </div>
         ))}
       </div>

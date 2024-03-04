@@ -7,8 +7,8 @@
   max-width: 1200px;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+ 
 }
-
 .product-card {
   width: 200px;
   background-color: #EDF3F8;
@@ -76,7 +76,8 @@
 .home-view-title {
   color: #44BAD3;
   margin-top: 40px;
-  align-self: flex-start;
+  
+ 
 }
 
 .colab-section-img {
@@ -109,10 +110,9 @@
 }
 .pitufo-dad {
   height: 200px;
-  margin-left: 0px;
+  margin-left: 20px;
   opacity: 80%;
 }
-
 .photo-mayor-responsive {
   display: none
 }
@@ -133,6 +133,8 @@
 .carousel-caption {
   font-size: smaller;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .home-view-photo {
@@ -177,6 +179,13 @@
     margin: 20px;
 
   }
+  .best-sellers, 
+  .new-product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+  
+
 }
   
-  
+}
