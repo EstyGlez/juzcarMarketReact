@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel1 from "../../Carousel/Carousel";
 import Wishlist from '../../Wishlist/Wishlist';
 import './Homeview.css';
+import ChatGPT from '../../chatGPT/ChatGPT';
 
 const HomeView = () => {
 
@@ -30,6 +31,7 @@ const HomeView = () => {
       </div>
       
       <Wishlist />
+      <ChatGPT/>
 
     </div>
   )
