@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer style={footerStyle}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <p style={textStyle}>© 2024, Júzcar Market - Todos los derechos reservados</p>
+                <h6 className='footer-text' style={textStyle}>© 2024, Júzcar Market - Todos los derechos reservados</h6>
                 <div>
                     <a href="https://www.facebook.com/tucuenta" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFacebook} size="2x" style={iconStyle} />

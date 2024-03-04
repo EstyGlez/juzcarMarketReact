@@ -20,7 +20,19 @@
   color: #44BAD3;
   border: none;
 }
+.button-add-product{
+  border-radius: 30px;
+  background-color: #44BAD3;
+  border: none;
+  padding: 10px;
+  color: white;
+  width: 200px;
+  transition: background-color 0.5s;
+}
 
+.button-add-product:hover {
+  background-color: #0d6efd;
+}
 .navbar-icons{
   display: flex;
   align-items: center;

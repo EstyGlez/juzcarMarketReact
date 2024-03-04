@@ -13,10 +13,12 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       addToFavorites({ imageUrl, name, price });
       // Mostrar SweetAlert2 cuando se agrega a favoritos
       Swal.fire({
-        icon: 'success',
-        title: '¡Producto agregado a tus favoritos!',
-        showConfirmButton: false,
-        timer: 1500
+        title: "Pitufoso!",
+        text: "Producto agregado a favoritos.",
+        imageUrl: "https://i.postimg.cc/9fFwbw1t/5a1be4e0aec484-0138718815117775047159-1.png",
+        imageWidth: 60,
+        imageHeight: 110,
+        imageAlt: "Custom image"
       });
     }
   };
@@ -24,7 +26,9 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
   const handleCartClick = () => {
     // Mostrar SweetAlert2 cuando se presiona el botón del carrito
     Swal.fire({
-      icon: 'error',
+      imageUrl: "https://i.postimg.cc/SsxJhnPQ/kisspng-grouchy-smurf-brainy-smurf-gutsy-smurf-gargamel-sm-smurfs-5ac28a9fce4612-6096295315226989118.png",
+      imageWidth: 75,
+      imageHeight: 110,
       title: '¡Aún no has iniciado sesión!',
       text: 'Por favor, inicia sesión para acceder al carrito.',
       showConfirmButton: true,
@@ -36,12 +40,14 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       <img src={imageUrl} alt="Producto" className="image-product" />
       <h5 className="product-info">{name}</h5>
       <p>{price}</p>
-      <button className="heart-button" onClick={handleLikeClick}>
-        <FontAwesomeIcon icon={faHeart} style={{ color: isLiked ? '#FF635E' : '#44BAD3' }} />
-      </button>
-      <button className="cart-button" onClick={handleCartClick}>
-        <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
-      </button>
+      <div className='card-btn'>
+        <button className="heart-button" onClick={handleLikeClick}>
+          <FontAwesomeIcon icon={faHeart} style={{ color: isLiked ? '#FF635E' : '#44BAD3' }} />
+        </button>
+        <button className="cart-button" onClick={handleCartClick}>
+          <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
+        </button>
+      </div>
     </div>
   );
 }
@@ -49,6 +55,7 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
 function Wishlist() {
   const [favorites, setFavorites] = React.useState([]);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+ 
 
   const addToFavorites = (product) => {
     setFavorites(prevFavorites => [...prevFavorites, product]);
@@ -94,20 +101,23 @@ function Wishlist() {
         
        </div>
 
-      <h3>Mis Favoritos</h3>
-      <div className='fav-product'>
-        <ul>
-          {favorites.map((item, index) => (
-            <li key={index}>
-              <img src={item.imageUrl} alt={item.name} style={{ width: '60px' }} />
-              <p>{item.name}</p>
-              <p>{item.price}</p>
-            </li>
-          ))}
-        </ul>
+       <h3>Mis Favoritos</h3>
+      <div className='fav-products-form'>
+        <div className={`fav-product ${favorites.length > 0 ? 'with-favorites' : ''}`}>
+          <ul>
+            {favorites.map((item, index) => (
+              <li key={index}>
+                <img src={item.imageUrl} alt={item.name} style={{ width: '60px' }} />
+                <p>{item.name}</p>
+                <p>{item.price}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
 }
+
 
 export default Wishlist;
