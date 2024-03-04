@@ -13,10 +13,12 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       addToFavorites({ imageUrl, name, price });
       // Mostrar SweetAlert2 cuando se agrega a favoritos
       Swal.fire({
-        icon: 'success',
-        title: '¡Producto agregado a tus favoritos!',
-        showConfirmButton: false,
-        timer: 1500
+        title: "Pitufoso!",
+        text: "Producto agregado a favoritos.",
+        imageUrl: "https://i.postimg.cc/9fFwbw1t/5a1be4e0aec484-0138718815117775047159-1.png",
+        imageWidth: 60,
+        imageHeight: 110,
+        imageAlt: "Custom image"
       });
     }
   };
@@ -24,7 +26,9 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
   const handleCartClick = () => {
     // Mostrar SweetAlert2 cuando se presiona el botón del carrito
     Swal.fire({
-      icon: 'error',
+      imageUrl: "https://i.postimg.cc/SsxJhnPQ/kisspng-grouchy-smurf-brainy-smurf-gutsy-smurf-gargamel-sm-smurfs-5ac28a9fce4612-6096295315226989118.png",
+      imageWidth: 75,
+      imageHeight: 110,
       title: '¡Aún no has iniciado sesión!',
       text: 'Por favor, inicia sesión para acceder al carrito.',
       showConfirmButton: true,
