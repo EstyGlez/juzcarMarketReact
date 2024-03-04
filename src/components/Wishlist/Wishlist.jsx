@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2'; // Importar SweetAlert2
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faShoppingCart, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './Wishlist.css';
 import { products, newproduct } from './Wishlist.const';
 
@@ -47,6 +47,9 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
         <button className="cart-button" onClick={handleCartClick}>
           <FontAwesomeIcon icon={faShoppingCart} style={{ color: '#44BAD3' }} />
         </button>
+        <button className="cart-button" onClick={handleLikeClick}>
+          <FontAwesomeIcon icon={faPlus} style={{ color: '#44BAD3' }} />
+        </button>
       </div>
     </div>
   );
@@ -54,9 +57,7 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
 
 function Wishlist() {
   const [favorites, setFavorites] = React.useState([]);
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
  
-
   const addToFavorites = (product) => {
     setFavorites(prevFavorites => [...prevFavorites, product]);
   };
