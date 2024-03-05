@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Loginmodal.css';
 import userService from '../../../userService.js';
 import { useNavigate } from 'react-router-dom'; 
+import Swal from 'sweetalert2';
 
 const LoginModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -48,14 +49,28 @@ const LoginModal = () => {
     try {
       await userService.addUser(newUserObj);
       localStorage.setItem('username', username);
-      alert('Usuario registrado exitosamente');
-      setShowModal(false);
+      Swal.fire({
+        title: "Pitufoso!",
+        text: "Usuario registrado exitosamente.",
+        imageUrl: "https://i.postimg.cc/9fFwbw1t/5a1be4e0aec484-0138718815117775047159-1.png",
+        imageWidth: 60,
+        imageHeight: 110,
+        imageAlt: "Custom image"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/UserProfile');
+          setShowModal(false);
+        }
+      });
     } catch (error) {
       console.error(error);
-      alert('Ocurrió un error al registrar el usuario');
+      Swal.fire({
+        title: 'Error',
+        text: 'Ocurrió un error al registrar el usuario',
+        icon: 'error'
+      });
     }
   };
-
   return (
     <div className="App">
       <button className="btn-user" onClick={() => setShowModal(true)}>
