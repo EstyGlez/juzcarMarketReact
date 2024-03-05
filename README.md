@@ -1,5 +1,5 @@
 
-![Logo](https://i.postimg.cc/nzF1tZmY/j-zcar-Logo.png)
+![Logo](https://i.postimg.cc/Wzv91k2d/Image20240305084918.png)
 
 
 # Proyecto 5: Júzcar Marketplace
@@ -14,7 +14,10 @@ El Market Place Vecinal de Júzcar es una emocionante iniciativa impulsada por l
 El diseño se basa en el protagonista principal del pueblo que es su caracteristico color azul. Además de otros colores que hacen referencia al universo de Los Pitufos (pelicula filmada en Júzcar).
 
 En la web se ha priorizado la experiencia de usuario con una interfaz cómoda y sencilla. En la misma, los usuarios pueden realizar compras como también compartir aquellos productos de producción artesanal.
+
+
 ## Stack
+
 Versión de control de git basado en el uso de la plataforma Github.
 
 Herramientas
@@ -39,7 +42,9 @@ FontAwesome
 Vitest
 React Router
 Json Server
-## Installation
+
+
+## Instalación
 
 Clonación del proyecto:
 
@@ -61,7 +66,9 @@ npm instal json-server
 npm install -D vitest
 npm install react-bootstrap bootstrap
 npm install --save @fortawesome/free-solid-svg-icons
-## Authors
+
+
+## Desarrolladores Web
 
 Las desarrolladoras web que han llevado adelante este proyecto son:
 - Carolay Vasquez Castro.
