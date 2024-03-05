@@ -1,12 +1,27 @@
-import React from 'react'
-import CardsForm from '../../cardsform/CardsForm.jsx'
+import React from 'react';
+import CardsForm from '../../cardsform/CardsForm.jsx';
 
 const UserProfile = () => {
+  const username = localStorage.getItem('username');
+
+  
+  const handleLogout = () => {
+   
+    localStorage.removeItem('username');
+    
+  };
+
   return (
     <div>
-      <CardsForm/>
+      
+      <h2>Bienvenid@ {username} a tu perfil de usuario</h2>
+      
+      <button onClick={handleLogout}>Cerrar sesión</button>
+      
+      <CardsForm />
     </div>
-  )
-}
+  );
+};
 
 export default UserProfile;
+

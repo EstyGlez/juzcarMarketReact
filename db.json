@@ -41,17 +41,117 @@
       "password": "123456"
     },
     {
+      "id": "f648",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "6cda",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "b26e",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "3bb4",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "95c3",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "efff",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "accd",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "0735",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "dcfe",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "6b5d",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "9fe2",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "348d",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "deb8",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "0960",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "9f0b",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "5fd7",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "9c56",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "e134",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "7c63",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "c72b",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "ea4d",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
       "id": "94d9",
       "name": "TestUser",
       "email": "test@example.com"
     },
     {
-      "id": "ddfd",
-      "name": "TestUser",
-      "email": "test@example.com"
-    },
-    {
-      "id": "81bb",
+      "id": "6bcf",
       "name": "TestUser",
       "email": "test@example.com"
     }
@@ -86,9 +186,9 @@
     },
     {
       "id": "99b3",
-      "title": "Pack de tres peluches",
+      "title": "Pack  peluches",
       "price": "24.95",
-      "description": "Set de peluches que incluye: Papá pitufo, Pitufina y Tontín. Medidas: 15cm",
+      "description": "Set que incluye: Papá pitufo, Pitufina y Tontín. Medidas: 15cm",
       "category": "Juguetes",
       "image": "https://tse2.mm.bing.net/th?id=OIP.E8aBlCQcBW5C8J8VC_fP2wHaHa&pid=Api&P=0&h=180",
       "stock": "28"

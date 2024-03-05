@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel1 from "../../Carousel/Carousel";
 import Wishlist from '../../Wishlist/Wishlist';
 import './Homeview.css';
+import ChatGPT from '../../chatGPT/ChatGPT';
 
 const HomeView = () => {
 
@@ -27,8 +28,10 @@ const HomeView = () => {
       <Wishlist />
       <img className='photo-mayor' src="https://i.postimg.cc/nrxdhNkC/alcalde-1-1.png" alt="imagen del alcalde de Júzcar" />
        <img className='photo-mayor-responsive' src="https://i.postimg.cc/Hnvc2Prf/alcalde-RESPONSIVE-1.png" alt="imagen del alcalde de Júzcar" />
+    
+
     </div>
   )
 }
 
-export default HomeView
+export default HomeView;
