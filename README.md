@@ -35,7 +35,7 @@ Lenguajes
 
 Librerias
 - React Vite
-- Axios
+- Fetch
 - React Bootstrap
 - SweetAlert2
 - FontAwesome
@@ -60,7 +60,6 @@ Esto debería instalar las dependencias necesarias para que el proyecto sea visi
 
 - npm create vite@latest
 - npm run dev (es preferible que esto esté corriendo en otro terminal que no deberías cerrar)
-- npm install axios
 - npm i react-router dom -E
 - npm instal json-server
 - npm install -D vitest

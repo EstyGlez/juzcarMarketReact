@@ -16,8 +16,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Routes>
       <Route path="/HomeView" element={<HomeView />} />
       <Route path="/UserProfile" element={<UserProfile />} />
+      <Route path="/" element={<Navigate replace to="/HomeView" />} />
     </Routes>
-    <My3DModel/>
+
+    <My3DModel />
     <Footer />
   </BrowserRouter>
 );
