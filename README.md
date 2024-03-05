@@ -22,26 +22,26 @@ Versión de control de git basado en el uso de la plataforma Github.
 
 Herramientas
 
-Visual Studio Code
-Figma
-Trello
-Slack
+- Visual Studio Code
+- Figma
+- Trello
+- Slack
 
 Lenguajes
 
-HTML
-CSS
-JavaScript
+- HTML
+- CSS
+- JavaScript
 
 Librerias
-React Vite
-Axios
-React Bootstrap
-SweetAlert2
-FontAwesome
-Vitest
-React Router
-Json Server
+- React Vite
+- Axios
+- React Bootstrap
+- SweetAlert2
+- FontAwesome
+- Vitest
+- React Router
+- Json Server
 
 
 ## Instalación
@@ -52,20 +52,20 @@ https://github.com/EstyGlez/juzcarMarketReact
 
 En Visual Code pon a correr los siguientes comandos:
 
-npm i
-npm run dev
-json-server --watch db.json
+- npm i
+- npm run dev
+- json-server --watch db.json
 
 Esto debería instalar las dependencias necesarias para que el proyecto sea visible en tu navegador. En caso de algún error o problema, estas son las dependecias que han sido utilizadas en este proyecto.
 
-npm create vite@latest
-npm run dev (es preferible que esto esté corriendo en otro terminal que no deberías cerrar)
-npm install axios
-npm i react-router dom -E
-npm instal json-server
-npm install -D vitest
-npm install react-bootstrap bootstrap
-npm install --save @fortawesome/free-solid-svg-icons
+- npm create vite@latest
+- npm run dev (es preferible que esto esté corriendo en otro terminal que no deberías cerrar)
+- npm install axios
+- npm i react-router dom -E
+- npm instal json-server
+- npm install -D vitest
+- npm install react-bootstrap bootstrap
+- npm install --save @fortawesome/free-solid-svg-icons
 
 
 ## Desarrolladores Web
