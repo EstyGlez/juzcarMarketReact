@@ -66,7 +66,7 @@ Esto debería instalar las dependencias necesarias para que el proyecto sea visi
 - npm install -D vitest
 - npm install react-bootstrap bootstrap
 - npm install --save @fortawesome/free-solid-svg-icons
-
+- npm run test (se han agregado test que deben correr usando este comando siempre que ya se haya hecho correr el npm run dev y jason-server previamente)
 
 ## Desarrolladores Web
 
