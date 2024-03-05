@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProductModal.css";
 
 const ProductModal = ({ product, closeModal }) => {
   return (
@@ -8,7 +9,12 @@ const ProductModal = ({ product, closeModal }) => {
           &times;
         </span>
         <h2>{product.name}</h2>
-        <img src={product.imageUrl} alt={product.name} />
+
+        <img
+          className="image-product"
+          src={product.imageUrl}
+          alt={product.name}
+        />
         <p>{product.price}</p>
         {product.description && <p>{product.description}</p>}
       </div>
