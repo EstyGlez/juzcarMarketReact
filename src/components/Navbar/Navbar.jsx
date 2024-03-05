@@ -26,7 +26,7 @@ function NavBar() {
       <Navbar className="navbarStyle">
         <Container>
           <Navbar.Brand href="#home"> 
-            <NavLink to='/'>
+            <NavLink to='/HomeView'>
               <img
                 src="src\assets\juzcarLogo.png"
                 className="juzgar-logo"
