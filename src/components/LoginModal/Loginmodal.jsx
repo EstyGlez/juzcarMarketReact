@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Loginmodal.css';
 import userService from '../../../userService.js';
+import { useNavigate } from 'react-router-dom'; 
 
 const LoginModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -13,6 +14,7 @@ const LoginModal = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
 
+  const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -22,6 +24,7 @@ const LoginModal = () => {
         // Guardar el nombre de usuario en el almacenamiento local
         localStorage.setItem('username', username);
         alert('Inicio de sesión exitoso');
+        navigate('/UserProfile');
         setShowModal(false);
       } else {
         alert('Nombre de usuario o contraseña incorrectos');
