@@ -19,6 +19,8 @@ const LoginModal = () => {
       const users = await userService.getAllUsers();
       const user = users.find(user => user.username === username && user.password === password);
       if (user) {
+        // Guardar el nombre de usuario en el almacenamiento local
+        localStorage.setItem('username', username);
         alert('Inicio de sesión exitoso');
         setShowModal(false);
       } else {
@@ -43,6 +45,8 @@ const LoginModal = () => {
     };
     try {
       await userService.addUser(newUserObj);
+      // Guardar el nombre de usuario en el almacenamiento local
+      localStorage.setItem('username', username);
       alert('Usuario registrado exitosamente');
       setShowModal(false);
     } catch (error) {
