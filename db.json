@@ -40,7 +40,6 @@
       "username": "Stefania",
       "password": "123456"
     },
- 
     {
       "id": "94d9",
       "name": "TestUser",
@@ -48,6 +47,11 @@
     },
     {
       "id": "ddfd",
+      "name": "TestUser",
+      "email": "test@example.com"
+    },
+    {
+      "id": "81bb",
       "name": "TestUser",
       "email": "test@example.com"
     }
