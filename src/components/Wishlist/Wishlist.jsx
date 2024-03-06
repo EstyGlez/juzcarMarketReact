@@ -125,7 +125,7 @@ function Wishlist() {
         <ProductModal product={selectedProduct} closeModal={closeModal} />
       )}
 
-      <h3>Mis Favoritos</h3>
+      <h2>Mis Favoritos</h2>
       <div className="fav-products-form">
         <div
           className={`fav-product ${
