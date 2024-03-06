@@ -7,7 +7,6 @@ const JuzcarChatbot = () => {
     const [question, setQuestion] = useState('');
     const [answer, setAnswer] = useState('');
 
-    // Esta función maneja la solicitud a la API para obtener una respuesta.
     const fetchAnswer = async (questionText) => {
         const response = await openai.complete({
             engine: 'davinci',
@@ -24,11 +23,7 @@ const JuzcarChatbot = () => {
 
     useEffect(() => {
         const defaultQuestion = '¿Qué puedo hacer en Júzcar?';
-        // Llama a fetchAnswer directamente con la pregunta por defecto.
         fetchAnswer(defaultQuestion);
-        // Debido a que fetchAnswer es una función async definida dentro del componente,
-        // no necesitamos marcarla como dependencia en el array de useEffect.
-        // Si se mueve fuera del componente, se debería incluir en este array.
     }, []);
 
     return (

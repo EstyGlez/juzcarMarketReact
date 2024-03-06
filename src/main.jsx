@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./components/App/App";
 import HomeView from "./components/Views/Home/HomeView";
 import UserProfile from "./components/Views/UserProfile/UserProfile";
 import "./index.css";

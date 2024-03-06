@@ -12,7 +12,6 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
       removeFromFavorites(name);
     } else {
       addToFavorites({ imageUrl, name, price });
-      // Mostrar SweetAlert2 cuando se agrega a favoritos
       Swal.fire({
         title: "Pitufoso!",
         text: "Producto agregado a favoritos.",
@@ -25,7 +24,6 @@ function ProductCard({ imageUrl, name, price, addToFavorites, removeFromFavorite
   };
 
   const handleCartClick = () => {
-    // Mostrar SweetAlert2 cuando se presiona el botón del carrito
     Swal.fire({
       imageUrl: "https://i.postimg.cc/SsxJhnPQ/kisspng-grouchy-smurf-brainy-smurf-gutsy-smurf-gargamel-sm-smurfs-5ac28a9fce4612-6096295315226989118.png",
       imageWidth: 75,
